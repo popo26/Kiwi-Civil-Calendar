@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block title %}<title>Trivia</title>{% endblock %}
+{% block content %}
+
+<div class="clearfix">
+    <a class="btn btn-secondary left" href="{% url 'todo:calendar' %}"> Back To Calendar </a>
+  </div>
+
+<div>
+<h1>Trivia</h1>
+
+<div class="card trivia-div" style="width: 18rem; margin:auto;">
+    <img id="question-img" class="card-img-top" src="https://media.giphy.com/media/E2Wd06hpnhBjV9ewI1/giphy.gif" alt="Card image cap">
+    <div class="card-body">
+
+        <p class="card-text" id="question">{{ question|safe }}</p>
+
+        <input id="answer" type="hidden" value="{{ answer }}">
+        <button id='trues' onclick="checkAnswer1()" name="True">🟢</button>
+        <button id='falses' onclick="checkAnswer2()" name="False">❌</button>
+        <p id="result"></p>
+
+        <a class="btn btn-info extra-buttons2" href="{% url 'todo:trivia' %}"> Next </a>
+    </div>
+  </div>
+
+{% load static %}
+<script src="{% static 'js/trivia.js' %}"></script>
+{% endblock %}

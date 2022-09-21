@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% block title %}<title>Login</title>{% endblock %}
+
+{% block content %}
+<div class="account-forms">
+
+  {% if form.errors %}
+    {% for field in form %}
+        {% for error in field.errors %}
+            <div class="alert alert-danger">
+                {{ field.label }} <strong>{{ error|escape }}</strong>
+            </div>
+        {% endfor %}
+    {% endfor %}
+    {% for error in form.non_field_errors %}
+        <div class="alert alert-danger">
+            {{ field.label }} <strong>{{ error|escape }}</strong>
+        </div>
+    {% endfor %}
+{% endif %}
+
+  <form method="post" novalidate>
+    {% csrf_token %}
+<div class="login-div">
+    <div class="row">
+      <div class="col">
+       
+        <input type="text" name="username" autofocus autocapitalize="none" autocomplete="username" maxlength="150"
+          required id="id_username" class="form-control text-center" placeholder="Username">
+        <br>
+        <input type="password" name="password" autocomplete="current-password" required id="id_password"
+          class="form-control text-center" placeholder="Password">
+        <br>
+        <button type="submit" class="btn btn-outline-dark btn-lg">Log In</button>
+      </div>
+    </div>
+  </form>
+</div>
+
+
+{% endblock %}

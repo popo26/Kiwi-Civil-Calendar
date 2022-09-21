@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block title %}<title>Nasa</title>{% endblock %}
+{% block content %}
+
+<div class="clearfix">
+    <a class="btn btn-secondary left" href="{% url 'todo:calendar' %}"> Back To Calendar </a>
+  </div>
+
+<div class="nasa-div">
+    <h1>{{ title }}</h1>
+    <p>Picture taken on {{ date }}</p>
+    <br>
+    <img src="{{ img }}" alt="nasa-apod" class="responsive">
+    <br>
+    <div class="explanation">
+ 
+   
+      <div class="accordion-item">
+        <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            <h4>T{{ explanation }}</h4>
+          </div>
+        </div>
+        <h2 class="accordion-header" id="headingOne">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" 
+          aria-expanded="true" aria-controls="collapseOne">
+            Read Full Description
+          </button>
+        </h2>
+      </div>
+
+    </div>
+
+</div>
+
+
+
+{% endblock %}

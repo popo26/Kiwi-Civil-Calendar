@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block title %}<title>Quote</title>{% endblock %}
+{% block content %}
+
+<div class="clearfix">
+    <a class="btn btn-secondary left" href="{% url 'todo:calendar' %}"> Back To Calendar </a>
+</div>
+
+<div class="bored-div">
+    <br>
+    <h1>Inspration for you.</h1>
+    <br>
+    <h3>{{ quote }}</h3>
+    <br>
+    <h4>By {{ author }}</h4>
+    <br>
+    <a class="btn btn-info extra-buttons2" href="{% url 'todo:quote' %}"> More </a>
+
+</div>
+
+
+{% endblock %}

@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %}<title>Bored?</title>{% endblock %}
+{% block content %}
+
+<div class="clearfix">
+    <a class="btn btn-secondary left" href="{% url 'todo:calendar' %}"> Back To Calendar </a>
+</div>
+
+<div class="bored-div">
+    <h1>Bored? Here is an idea....</h1>
+    <br>
+    <h3>Why don't you {{ activity }}?</h3>
+    <br>
+    <a class="btn btn-info extra-buttons2" href="{% url 'todo:bored' %}"> Still Bored? </a>
+
+</div>
+
+{% endblock %}

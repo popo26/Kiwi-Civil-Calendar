@@ -1,0 +1,713 @@
+* {
+    margin: 0;
+}
+
+body {
+    text-align: center;
+    font-family: 'Baloo 2', cursive;
+    background-image: url("https://www.transparenttextures.com/patterns/grid-me.png");
+
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+header {
+    color:#777;
+    line-height: 100px;
+    margin-bottom: 50px;;
+}
+
+.extra-buttons {
+  border-radius: 100%;
+  background: #5c008a !important;
+  border:none;
+  color:white !important;
+  font-weight: bold;
+}
+
+.extra-buttons2 {
+  background: #279ec2 !important;
+  border-color: #279ec2 !important;
+  color:white!important;
+}
+
+.extra-buttons2:hover {
+  background: transparent !important;
+  border-color: #279ec2 !important;
+  color:#777!important;
+}
+
+.custom-nav{
+    color:#777 !important;
+    line-height: 100px;
+    margin-bottom: 50px;;
+    
+    background-color: #279ec2;
+    background-image: url("https://www.transparenttextures.com/patterns/concrete-wall-2.png");
+}
+
+.custom-nav a {
+    color: black;
+}
+
+.clock-div {
+  margin-left:40px;
+  margin-right:40px;
+}
+
+.logout-button {
+  margin:0 0 0 100px;
+}
+
+.password-reset-button {
+  --bs-btn-padding-y: .25rem;
+  --bs-btn-padding-x: .5rem; 
+  --bs-btn-font-size: 1rem;
+  border-radius: 26px;
+  background-color: #f2f274 !important;
+  color:#777 !important;
+  font-weight:800;
+}
+
+.password-reset-button:hover {
+  --bs-btn-padding-y: .25rem;
+  --bs-btn-padding-x: .5rem; 
+  --bs-btn-font-size: 1rem;
+  border-radius: 26px;
+  background-color: transparent !important;
+  color: #f2f274!important;
+  font-weight:800;
+}
+
+.login-div {
+  background-color: #279ec2;
+  background-image: url("https://www.transparenttextures.com/patterns/concrete-wall-2.png");
+  width:60%;
+  min-width:200px;
+  margin:auto;
+  padding:40px;
+}
+
+.navbar-text {
+  width:80%;
+  margin:auto;
+}
+
+
+#greeting {
+  font-weight: 600;
+  font-size: 60px;
+}
+
+.account-forms{
+  width:40%;
+  margin:auto;
+  background-color: #279ec2;
+  background-image: url("https://www.transparenttextures.com/patterns/concrete-wall-2.png");
+  border-radius: 26px;
+}
+
+
+
+.note{
+    border-radius: 7px;
+    box-shadow: 0 2px 5px #ccc;
+    padding: 10px;
+    width: 240px;
+    margin: 16px;
+    float: left;
+    background-color: #f2f274;
+    background-image: url("https://www.transparenttextures.com/patterns/graphy.png");
+    font-family:'Nanum Pen Script', cursive;
+    font-size: 26px;
+}
+
+.note p {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+
+.note button {
+    position: relative;
+    float: right;
+    margin-right: 10px;
+    color: red;
+    border: none;
+    width: 36px;
+    height: 36px;
+    cursor: pointer;
+    outline: none;
+  }
+
+
+/* calendar */
+.calendar {
+    width: 60%;
+    margin: auto;
+    font-size: 14px;
+    background-color: black;
+    border-radius: 26px;
+    color:white;
+  }
+
+  .calendar tr, .calendar td {
+    border: 2px solid white;
+  }
+  
+  .calendar th {
+    padding: 10px;
+    text-align: center;
+    font-size: 18px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    
+  }
+  
+  .calendar td {
+    width: 50px;
+    height: 50px;
+    padding: 30px 0px 0px 5px;
+
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+    
+  }
+  
+  .month {
+    font-size: 30px;
+  }
+  
+  .date {
+    font-size: 26px;
+    font-weight: bolder;
+  }
+  
+  ul {
+    height: 100%;
+    padding: 0px 2px 0px 16px;
+  }
+  
+  .calendar a {
+    color: pink;
+    font-family:'Nanum Pen Script', cursive;
+    text-decoration: none;
+    font-size: large;
+  }
+
+  
+  .left {
+    float: left;
+  } 
+  
+  .right {
+    float: right;
+  }
+  
+  .btn {
+    outline: none;
+    color: black;
+    background-color: transparent;
+    box-shadow: 0 0 0 0;
+    
+  }
+
+  .family-button {
+    background-color: pink !important;
+    border-color: pink !important;
+    color:#5c008a;
+    border:2px solid #5c008a !important;
+    
+  }
+  
+  .form {
+    margin: auto;
+  }
+  
+ 
+  .form-div{
+    width:600px;
+    margin:auto;
+  }
+
+  .main-container {
+    width:98%;
+    margin:auto;
+    overflow:hidden;
+  }
+
+  .left-div {
+    width:40%;
+    float:left;
+  }
+
+  .right-div {
+    overflow:hidden;   
+  }
+
+  .clearfix {
+    margin: 15px;
+  }
+
+  .form-t {
+    width:60%;
+  }
+
+  .hello {
+    display:inline-flex;
+  }
+
+  .username {
+    display: inline-flex;
+    font-weight: 600;
+    font-size:60px;
+  }
+
+.analog-clock{
+  display: inline-flex;
+}
+
+.date-time{
+  line-height: 0;
+  font-size: 26px;
+  color:white;
+  
+}
+
+.free {
+  width:80%;
+  margin:auto;
+  border-radius: 26px;
+}
+
+
+
+/* nasa.html */
+
+.nasa-div {
+  width:90%;
+  margin:auto;
+}
+
+
+.responsive {
+  width: 100%;
+  max-width:600px;
+  height:auto;
+}
+
+.explanation {
+  padding: 30px;
+  text-align: left;
+  text-transform: capitalize;
+  font-family:'Nanum Pen Script', cursive;
+}
+
+/* trivia */
+
+.trivia-div{
+  border: 5px solid #5c008a;
+  background-color: #5c008a;
+  background-image: url("https://www.transparenttextures.com/patterns/carbon-fibre-v2.png");
+  color:white;
+}
+
+.trivia-div button {
+  background-color: transparent;
+  border: none;
+}
+
+.trivia-div button:hover {
+  background: black;
+  border-radius: 100%;
+
+}
+
+/* bored */
+
+.bored-div h1{
+  text-transform: capitalize;
+}
+
+.bored-div h3 {
+  font-family:'Nanum Pen Script', cursive;
+}
+
+/* news */
+.news-div {
+  width:80%;
+  margin:auto;
+  padding:30px;
+
+}
+
+.row-div {
+  margin:auto;
+}
+
+.each-card {
+  margin:10px;
+}
+
+.search-div {
+  width:60%;
+  margin:auto;
+}
+
+/* covid */
+
+.covid-div {
+  width:60%;
+  margin:auto;
+  padding:30px;
+  color:white;
+  background-color: #0534f2;
+  background-image: url("https://www.transparenttextures.com/patterns/little-pluses.png");
+}
+
+.covid-div h1 {
+  color:darkred;
+  font-weight: bold;
+}
+
+.covid-div h3 {
+  text-transform: capitalize;
+}
+
+/* password_change_form.html */
+
+.reset-button {
+  margin-top:20px;
+}
+
+.high-five {
+  margin-top:20px;
+  border-radius: 100%;
+  width: 100%;
+  max-width:600px;
+  height:auto;
+}
+
+
+/* mobile */
+
+@media only screen and (max-width: 430px) {
+
+  .account-forms{
+    width:80%;
+    margin:auto;
+    background-color: #279ec2;
+    background-image: url("https://www.transparenttextures.com/patterns/concrete-wall-2.png");
+    border-radius: 26px;
+  }
+  
+  .login-div {
+    width:60%;
+    min-width:260px;
+    margin:auto;
+    padding:40px;
+  }
+
+  .logout-button {
+    margin:0;
+  }
+
+  .navbar a {
+    margin:auto;
+  }
+
+  .navbar-text {
+    width:80%;
+    margin:auto;
+  }
+
+  .clock-div {
+    margin:auto;
+  }
+
+ .greet-username {
+  text-align: center;
+  margin:auto;
+ }
+
+  #greeting {
+    font-size:20px;
+  }
+
+  .username {
+    font-size:20px;
+  }
+
+ 
+
+  .left-div {
+    width:100%;
+    float:none;
+  }
+
+  .right-div {
+    width:100%;
+    float:none;
+  }
+
+  .form-div{
+    width:100%;
+    margin:auto;
+  }
+
+  .note{
+    border-radius: 7px;
+    box-shadow: 0 2px 5px #ccc;
+    padding: 6px;
+    width: 140px;
+    margin: 16px;
+    float: none;
+    background-color: #f2f274;
+    background-image: url("https://www.transparenttextures.com/patterns/graphy.png");
+    font-family:'Nanum Pen Script', cursive;
+    font-size: 16px;
+}
+
+.note p {
+    font-size: 1em;
+    margin-bottom: 3px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+
+.note button {
+    position: relative;
+    float: right;
+    margin-right: 10px;
+    color: red;
+    border: none;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    outline: none;
+  }
+
+  .calendar {
+    width: 100%;
+    margin: auto;
+    font-size: 4px;
+    background-color: black;
+    border-radius: 26px;
+    color:white;
+  }
+
+  .calendar tr, .calendar td {
+    border: 2px solid white;
+  }
+  
+  .calendar th {
+    padding: 5px;
+    text-align: center;
+    font-size: 10px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    
+  }
+  
+  .calendar td {
+    width: 30px;
+    height: 18px;
+    padding: 20px 0px 0px 5px;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  .month {
+    font-size: 12px;
+  }
+  
+  .date {
+    font-size: 22px;
+    font-weight: bolder;
+  }
+  
+  ul {
+    height: 100%;
+    padding: 0 2px 0 10px;
+  }
+  
+  .calendar a {
+    color: pink;
+    font-family:'Nanum Pen Script', cursive;
+    text-decoration: none;
+    font-size:x-small;
+  }
+
+
+  .covid-div {
+    width:60%;
+    margin:auto;
+    padding:20px;
+    color:white;
+    background-color: #0534f2;
+    background-image: url("https://www.transparenttextures.com/patterns/little-pluses.png");
+  }
+  
+  .covid-div h1 {
+    color:darkred;
+    font-weight: bold;
+  }
+  
+  .covid-div h3 {
+    text-transform: capitalize;
+    font-size: large;
+  }
+
+}
+
+/* tablet */
+
+@media only screen and (max-width: 800px) and (min-width:431px) {
+
+  .account-forms{
+    width:50%;
+    margin:auto;
+    background-color: #279ec2;
+    background-image: url("https://www.transparenttextures.com/patterns/concrete-wall-2.png");
+    border-radius: 26px;
+  }
+  
+  .login-div {
+    width:60%;
+    min-width:300px;
+    margin:auto;
+    padding:40px;
+  }
+
+  .logout-button {
+    margin:0;
+  }
+
+
+  .navbar-text {
+    width:50%;
+    margin:auto;
+  }
+
+  .clock-div {
+    margin:auto;
+  }
+
+ .greet-username {
+  text-align: center;
+  margin:auto;
+ }
+
+  #greeting {
+    font-size:46px;
+  }
+
+  .username {
+    font-size:46px;
+  }
+
+  .left-div {
+    width:90%;
+    float:none;
+  }
+
+  .right-div {
+    width:100%;
+    float:none;
+  }
+
+  .form-div{
+    width:60%;
+    margin:auto;
+  }
+
+  .note{
+    border-radius: 7px;
+    box-shadow: 0 2px 5px #ccc;
+    padding: 8px;
+    width: 180px;
+    margin: 16px;
+    float: none;
+    background-color: #f2f274;
+    background-image: url("https://www.transparenttextures.com/patterns/graphy.png");
+    font-family:'Nanum Pen Script', cursive;
+    font-size: 20px;
+}
+
+.note p {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+
+.note button {
+    position: relative;
+    float: right;
+    margin-right: 10px;
+    color: red;
+    border: none;
+    width: 36px;
+    height: 36px;
+    cursor: pointer;
+    outline: none;
+  }
+
+  .calendar {
+    width: 100%;
+    margin: auto;
+    font-size: 4px;
+    background-color: black;
+    border-radius: 26px;
+    color:white;
+  }
+
+  .calendar tr, .calendar td {
+    border: 2px solid white;
+  }
+  
+  .calendar th {
+    padding: 5px;
+    text-align: center;
+    font-size: 10px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    
+  }
+  
+  .calendar td {
+    width: 30px;
+    height: 18px;
+    padding: 20px 0px 0px 5px;
+    font-family: 'Roboto', sans-serif;    
+  }
+  
+  .month {
+    font-size: 12px;
+  }
+  
+  .date {
+    font-size: 22px;
+    font-weight: bolder;
+  }
+  
+  ul {
+    height: 100%;
+    padding: 0 2px 0 12px;
+  }
+  
+  .calendar a {
+    color: pink;
+    font-family:'Nanum Pen Script', cursive;
+    text-decoration: none;
+    font-size:small;
+  }
+
+}
+
+
+
+
+
+

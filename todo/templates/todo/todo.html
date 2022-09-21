@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+
+{% block content %}
+<!-- <div>
+    <a href="{% url 'todo:covid'%}"><button type="button" class="btn btn-outline-dark extra-buttons">COVID</button></a>
+    <a href="{% url 'todo:trivia'%}"><button type="button" class="btn btn-outline-dark extra-buttons">Trivia</button></a>
+    <a href="{% url 'todo:nasa'%}"><button type="button" class="btn btn-outline-dark extra-buttons">NASA</button></a>
+    <a href="{% url 'todo:bored'%}"><button type="button" class="btn btn-outline-dark extra-buttons">Bored</button></a>
+    <a href="{% url 'todo:news'%}"><button type="button" class="btn btn-outline-dark extra-buttons">News</button></a>
+    <a href="{% url 'todo:quote'%}"><button type="button" class="btn btn-outline-dark extra-buttons">Quote</button></a>
+  </div> -->
+<div class="main-container">
+
+    <div class="right-div">
+        <div class="clearfix">
+            <a class="btn btn-outline-secondary btn-lg" href="{% url 'todo:calendar' %}?{{ prev_month }}"> <strong>
+                    <<</strong> </a> <a class="btn btn-secondary btn-lg" href="{% url 'todo:event_new' %}"> New Event </a>
+            <a class="btn btn-outline-secondary btn-lg" href="{% url 'todo:calendar' %}?{{ next_month }}"><strong>>></strong></a>
+            
+            <a class="btn btn-danger btn-lg family-button" href="{% url 'todo:family-calendar' %}">Full Calendar</a>
+
+            <br>
+            {{ calendar }}
+        </div>
+    </div>
+
+    <br>
+
+    <div class="left-div container">
+        <div class="row">
+            {% if todos %}
+            {% for todo in todos %}
+
+            <div class="note col-lg-6 col-sm-12">
+                <form action="{% url 'todo:delete' pk=todo.pk %}" method="post">
+                    {% csrf_token %}
+
+                    <p>{{ todo.title }}</p>
+                    <p>{{ todo.start_time| time:"H:i a" }}</p>
+
+                    <button type="submit" value="Delete">X</button>
+                </form>
+
+            </div>
+            {% endfor %}
+            {% else %}
+            <img class="free" src="https://media.giphy.com/media/lD76yTC5zxZPG/giphy.gif" alt="i_am_free">
+        
+            {% endif %}
+        </div>
+        <br>
+    </div>
+
+
+</div>
+
+
+
+{% endblock %}

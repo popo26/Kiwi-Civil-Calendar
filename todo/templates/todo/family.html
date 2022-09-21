@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block title %}<title>Full Calendar</title>{% endblock %}
+{% block content %}
+
+<div class="clearfix">
+    <a class="btn btn-secondary left" href="{% url 'todo:calendar' %}"> Back To Calendar </a>
+  </div>
+
+
+  <div class="clearfix">
+    <h1 class="full-calendar-title">Full Calendar</h1>
+    <a class="btn btn-outline-secondary btn-lg" href="{% url 'todo:family-calendar' %}?{{ prev_month }}"> <strong>
+            <<</strong> </a> 
+    <a class="btn btn-outline-secondary btn-lg" href="{% url 'todo:family-calendar' %}?{{ next_month }}"><strong>>></strong></a>
+   
+
+    {{calendar}}
+</div>
+
+
+
+
+
+{% endblock %}
