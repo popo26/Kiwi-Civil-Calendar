@@ -12,11 +12,13 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 
 import dj_database_url
 import os
-import django_heroku
+
 from pathlib import Path
 from dotenv import load_dotenv
 
 load_dotenv()
+
+#Python 3.7 for Render
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -39,7 +41,7 @@ SECRET_KEY =os.getenv("SECRET_KEY")
 # #Heroku
 DEBUG = os.environ.get('DJANGO_DEBUG', False) or True
 
-ALLOWED_HOSTS = ['whatsmyagendatoday.herokuapp.com', '127.0.0.1']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -100,9 +102,7 @@ DATABASES = {
     }
 }
 
-#Heroku
-db_from_env = dj_database_url.config(conn_max_age=500)
-DATABASES['default'].update(db_from_env)
+
 
 
 # Password validation
@@ -178,6 +178,5 @@ STATICFILES_DIRS = (
 os.path.join(BASE_DIR, 'static'),
 )
 
-# Activate Django-Heroku.
-django_heroku.settings(locals(), staticfiles=False)
+
 

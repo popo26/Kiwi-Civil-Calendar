@@ -10,7 +10,7 @@ This app allow you to add and remove your todo items as well as view the whole f
 - HTML/CSS/SCSS
 - Javascript
 
-## Preparation for virtualenv, AWS S3 Bucket, and .env_example file:
+## Preparation for virtualenv and .env_example file:
 1. Once clone or download this code, [create a virtualenv](https://docs.python.org/3/library/venv.html).
 2. Acticate the virtualenv.
 3. From terminal, install all the requirements with `pip install -r requirements.txt`.

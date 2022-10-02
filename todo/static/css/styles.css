@@ -14,7 +14,7 @@ body {
 }
 
 header {
-    color:#777;
+    color:white;
     line-height: 100px;
     margin-bottom: 50px;;
 }
@@ -36,7 +36,7 @@ header {
 .extra-buttons2:hover {
   background: transparent !important;
   border-color: #279ec2 !important;
-  color:#777!important;
+  color:white!important;
 }
 
 .custom-nav{
@@ -86,8 +86,8 @@ header {
 }
 
 .login-div {
-  background-color: #279ec2;
-  background-image: url("https://www.transparenttextures.com/patterns/concrete-wall-2.png");
+  background-color: #000d05;
+  background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
   width:60%;
   min-width:200px;
   margin:auto;
@@ -108,8 +108,8 @@ header {
 .account-forms{
   width:40%;
   margin:auto;
-  background-color: #279ec2;
-  background-image: url("https://www.transparenttextures.com/patterns/concrete-wall-2.png");
+  background-color: #060a14;
+  background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
   border-radius: 26px;
 }
 
@@ -233,7 +233,8 @@ header {
   
  
   .form-div{
-    width:600px;
+    width:80%;
+    max-width:500px;
     margin:auto;
   }
 

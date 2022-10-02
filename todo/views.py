@@ -23,6 +23,7 @@ from django.template.defaulttags import register
 from django.contrib.auth.signals import user_logged_in, user_logged_out
 from django.dispatch import receiver
 from .templatetags.tags import reverseGeocode, tuple_cordinates
+from accounts.models import CustomUser
 
   
 
@@ -65,22 +66,22 @@ class CalendarView(LoginRequiredMixin, generic.ListView):
         context = super().get_context_data(**kwargs)
         d = get_date(self.request.GET.get('month', None))
         cal = Calendar(d.year, d.month)
-        html_cal = cal.formatmonth(withyear=True)
+        html_cal = cal.formatmonth(withyear=True, user=self.request.user)
         now = datetime.now()
-        current_user=self.request.user
-        name=current_user.username
+        user_session_id = self.request.session['_auth_user_id']
+        user = CustomUser.objects.get(id=user_session_id)
         todos = Event.objects.filter(
             start_time__year=now.year, 
             start_time__month=now.month, 
             start_time__day=now.strftime('%d'), 
-            user_name=name
+            username_id = user_session_id,
             )
         
         context['calendar'] = mark_safe(html_cal)
         context['prev_month'] = prev_month(d)
         context['next_month'] = next_month(d)
         context['todos'] = todos
-        context['current_user'] = name
+        context['current_user'] = user
   
         if self.request.method == "POST":
             todo = self.request.POST.get['delete-todo']

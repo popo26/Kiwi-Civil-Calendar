@@ -10,9 +10,12 @@ class EventForm(ModelForm):
     # datetime-local is a HTML5 input type, format to make date time show on fields
     widgets = {
       'title':forms.TextInput(attrs={"class":'form-control'}),
+      'site':forms.TextInput(attrs={"class":'form-control'}),
       'start_time': DateInput(attrs={'type': 'datetime-local', "class":'form-control'}, format='%Y-%m-%dT%H:%M'),
       'end_time': DateInput(attrs={'type': 'datetime-local', "class":'form-control'}, format='%Y-%m-%dT%H:%M'),
       'user_name':forms.HiddenInput(),
+      'description':forms.Textarea(attrs={"class":'form-control', 'cols':"10"}),
+      
     }
     fields = '__all__'
     labels = {"title": "Todo", 'start_time': "Start", 'end_time':"End"}

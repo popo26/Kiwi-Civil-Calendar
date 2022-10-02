@@ -36,7 +36,9 @@
                     {% csrf_token %}
 
                     <p>{{ todo.title }}</p>
+                    <p>＠{{ todo.site }}</p>
                     <p>{{ todo.start_time| time:"H:i a" }}</p>
+                    <p>{{ todo.description }}</p>
 
                     <button type="submit" value="Delete">X</button>
                 </form>
