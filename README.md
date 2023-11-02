@@ -1,12 +1,13 @@
-# Kiwi Civil Calendar App
+# Kiwi Civil Calendar App -- In Progress
 
 ## What this app does:
-This app allow you to add and remove your todo items as well as view the whole family calendar.
-[Live site](https://whatsmyagendatoday.herokuapp.com/)
+This app allow you to easily track site photos taken on a calendar.
+
 
 ## Technology:
 - Python 3
 - Django
+- GeoDjango
 - HTML/CSS/SCSS
 - Javascript
 
@@ -15,10 +16,7 @@ This app allow you to add and remove your todo items as well as view the whole f
 2. Acticate the virtualenv.
 3. From terminal, install all the requirements with `pip install -r requirements.txt`.
 4. I use [python-dotenv](https://pypi.org/project/python-dotenv/) to access environment variables.
-5. Get a free API at [OpenWeather API](https://api.openweathermap.org). Fill related sections in the `.env_example` file.
-6. Get a free API at [Nasa API](https://api.nasa.gov/). Fill related sections in the `.env_example` file.
-7. Get a free API at [Rapid API](https://rapidapi.com/hub). Fill related sections in the `.env_example` file.
-8. rename `.env_example` to `.env`.
+5. rename `.env_example` to `.env`.
 
 
 ## Run the app:
